@@ -1,0 +1,459 @@
+
+==================== FINAL INTERFACE ====================
+2017-03-07 20:31:34.803936 UTC
+
+interface W5-0.1.0.0-C1YhGcVwRjoCzSJResfj0m:StackVM 8001
+  interface hash: aaa08d8140f1da32c5d9e603e56e83a8
+  ABI hash: 095537906acdc0f0634de1c7b09bb9fa
+  export-list hash: 4aa72921bf95a816ef2f926f78ecd60b
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b159a15c55fa7c6870cb2eb79bbae5a5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  StackVM.stackVM
+  StackVM.Program
+  StackVM.Stack
+  StackVM.StackExp{StackVM.Add StackVM.And StackVM.Mul StackVM.Or StackVM.PushB StackVM.PushI}
+  StackVM.StackVal{StackVM.BVal StackVM.IVal StackVM.Void}
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.Either bd9f099b82d4ed2d98c56d7144ac6957
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 62c0e736506aac47ef40569f5b82e19d
+d10f129054310e6db56b92e4eb8eb422
+  $fShowStackExp :: GHC.Show.Show StackVM.StackExp
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ StackVM.StackExp
+                  StackVM.$fShowStackExp_$cshowsPrec
+                  StackVM.$fShowStackExp_$cshow
+                  StackVM.$fShowStackExp_$cshowList -}
+d10f129054310e6db56b92e4eb8eb422
+  $fShowStackExp1 :: StackVM.StackExp -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (StackVM.$fShowStackExp_$cshowsPrec
+                   StackVM.$fShowStackExp2) -}
+304e0ffc95b3b0807b7ecaec137dc339
+  $fShowStackExp10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   GHC.Show.shows21
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+0278754406e74e0b451160c975ca21c4
+  $fShowStackExp2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+858398c456fb570d36217463177b1171
+  $fShowStackExp3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Or"#) -}
+d1bfa0d8526fca98de9ef07e166d2759
+  $fShowStackExp4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "And"#) -}
+7346883de04182716f78d350b101de15
+  $fShowStackExp5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Mul"#) -}
+c88505a44a311c0ac7eda3d9467a3e72
+  $fShowStackExp6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Add"#) -}
+8045133e583200508e24c5841f97575c
+  $fShowStackExp7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "PushB "#) -}
+3bbc75e2000d2eeb87b2935171086619
+  $fShowStackExp8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "PushI "#) -}
+8bf60d01fcb3bf20ce2c5e0f26cf394e
+  $fShowStackExp9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   GHC.Show.shows20
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+d10f129054310e6db56b92e4eb8eb422
+  $fShowStackExp_$cshow :: StackVM.StackExp -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: StackVM.StackExp) ->
+                 case x of wild {
+                   StackVM.PushI b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        StackVM.$fShowStackExp8
+                        (case GHC.Show.$w$cshowsPrec3
+                                11#
+                                b1
+                                (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                         GHC.Types.: @ GHC.Types.Char ww5 ww6 })
+                   StackVM.PushB b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        StackVM.$fShowStackExp7
+                        (case b1 of wild1 {
+                           GHC.Types.False -> StackVM.$fShowStackExp10
+                           GHC.Types.True -> StackVM.$fShowStackExp9 })
+                   StackVM.Add -> StackVM.$fShowStackExp6
+                   StackVM.Mul -> StackVM.$fShowStackExp5
+                   StackVM.And -> StackVM.$fShowStackExp4
+                   StackVM.Or -> StackVM.$fShowStackExp3 }) -}
+d10f129054310e6db56b92e4eb8eb422
+  $fShowStackExp_$cshowList :: [StackVM.StackExp] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ StackVM.StackExp
+                   StackVM.$fShowStackExp1) -}
+d10f129054310e6db56b92e4eb8eb422
+  $fShowStackExp_$cshowsPrec ::
+    GHC.Types.Int -> StackVM.StackExp -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U>,
+     Unfolding: (\ (a :: GHC.Types.Int)
+                   (ds :: StackVM.StackExp)
+                   (eta :: GHC.Base.String) ->
+                 case ds of wild {
+                   StackVM.PushI b1
+                   -> case a of wild1 { GHC.Types.I# x ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11#) of wild2 {
+                        GHC.Types.False
+                        -> GHC.Base.++
+                             @ GHC.Types.Char
+                             StackVM.$fShowStackExp8
+                             (case GHC.Show.$w$cshowsPrec3 11# b1 eta of ww4 { (#,#) ww5 ww6 ->
+                              GHC.Types.: @ GHC.Types.Char ww5 ww6 })
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows9
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                StackVM.$fShowStackExp8
+                                (case GHC.Show.$w$cshowsPrec3
+                                        11#
+                                        b1
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.shows6
+                                           eta) of ww4 { (#,#) ww5 ww6 ->
+                                 GHC.Types.: @ GHC.Types.Char ww5 ww6 })) } }
+                   StackVM.PushB b1
+                   -> case a of wild1 { GHC.Types.I# x ->
+                      let {
+                        p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                        = \ (x1 :: GHC.Base.String)[OneShot] ->
+                          GHC.Base.++
+                            @ GHC.Types.Char
+                            StackVM.$fShowStackExp7
+                            (case b1 of wild2 {
+                               GHC.Types.False -> GHC.Base.++ @ GHC.Types.Char GHC.Show.shows21 x1
+                               GHC.Types.True
+                               -> GHC.Base.++ @ GHC.Types.Char GHC.Show.shows20 x1 })
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11#) of wild2 {
+                        GHC.Types.False -> p eta
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows9
+                             (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 eta)) } }
+                   StackVM.Add
+                   -> GHC.Base.++ @ GHC.Types.Char StackVM.$fShowStackExp6 eta
+                   StackVM.Mul
+                   -> GHC.Base.++ @ GHC.Types.Char StackVM.$fShowStackExp5 eta
+                   StackVM.And
+                   -> GHC.Base.++ @ GHC.Types.Char StackVM.$fShowStackExp4 eta
+                   StackVM.Or
+                   -> GHC.Base.++ @ GHC.Types.Char StackVM.$fShowStackExp3 eta }) -}
+4cc3f025c277b30a4e850f3624691c5b
+  $fShowStackVal :: GHC.Show.Show StackVM.StackVal
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ StackVM.StackVal
+                  StackVM.$fShowStackVal_$cshowsPrec
+                  StackVM.$fShowStackVal_$cshow
+                  StackVM.$fShowStackVal_$cshowList -}
+4cc3f025c277b30a4e850f3624691c5b
+  $fShowStackVal1 :: StackVM.StackVal -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (StackVM.$fShowStackVal_$cshowsPrec
+                   StackVM.$fShowStackExp2) -}
+92cbdd7828870e5914bccdf32efb5491
+  $fShowStackVal2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Void"#) -}
+ee032275dfec0de4e2837cc2bfcbc945
+  $fShowStackVal3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "BVal "#) -}
+783ec14220ea170ecbb74f9c82c34327
+  $fShowStackVal4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "IVal "#) -}
+4cc3f025c277b30a4e850f3624691c5b
+  $fShowStackVal_$cshow :: StackVM.StackVal -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: StackVM.StackVal) ->
+                 StackVM.$fShowStackVal_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+4cc3f025c277b30a4e850f3624691c5b
+  $fShowStackVal_$cshowList :: [StackVM.StackVal] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ StackVM.StackVal
+                   StackVM.$fShowStackVal1) -}
+4cc3f025c277b30a4e850f3624691c5b
+  $fShowStackVal_$cshowsPrec ::
+    GHC.Types.Int -> StackVM.StackVal -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U>,
+     Unfolding: (\ (a :: GHC.Types.Int)
+                   (ds :: StackVM.StackVal)
+                   (eta :: GHC.Base.String) ->
+                 case ds of wild {
+                   StackVM.IVal b1
+                   -> case a of wild1 { GHC.Types.I# x ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11#) of wild2 {
+                        GHC.Types.False
+                        -> GHC.Base.++
+                             @ GHC.Types.Char
+                             StackVM.$fShowStackVal4
+                             (case GHC.Show.$w$cshowsPrec3 11# b1 eta of ww4 { (#,#) ww5 ww6 ->
+                              GHC.Types.: @ GHC.Types.Char ww5 ww6 })
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows9
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                StackVM.$fShowStackVal4
+                                (case GHC.Show.$w$cshowsPrec3
+                                        11#
+                                        b1
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.shows6
+                                           eta) of ww4 { (#,#) ww5 ww6 ->
+                                 GHC.Types.: @ GHC.Types.Char ww5 ww6 })) } }
+                   StackVM.BVal b1
+                   -> case a of wild1 { GHC.Types.I# x ->
+                      let {
+                        p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                        = \ (x1 :: GHC.Base.String)[OneShot] ->
+                          GHC.Base.++
+                            @ GHC.Types.Char
+                            StackVM.$fShowStackVal3
+                            (case b1 of wild2 {
+                               GHC.Types.False -> GHC.Base.++ @ GHC.Types.Char GHC.Show.shows21 x1
+                               GHC.Types.True
+                               -> GHC.Base.++ @ GHC.Types.Char GHC.Show.shows20 x1 })
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11#) of wild2 {
+                        GHC.Types.False -> p eta
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows9
+                             (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 eta)) } }
+                   StackVM.Void
+                   -> GHC.Base.++ @ GHC.Types.Char StackVM.$fShowStackVal2 eta }) -}
+7b6a99b1f1f3808174d4c67a937d49d2
+  $tc'Add :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9393788421580161220##
+                   13259627716211542842##
+                   StackVM.$trModule
+                   StackVM.$tc'Add1) -}
+f9b4f184b3ccd94d4a3fdccdbb0b980a
+  $tc'Add1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Add"#) -}
+4e2f3af52e7bb73e8dc8dd14d6b5a703
+  $tc'And :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11611343231971086798##
+                   2217899451007839365##
+                   StackVM.$trModule
+                   StackVM.$tc'And1) -}
+e353792cb4cf6c5dd6532a064d8e385e
+  $tc'And1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'And"#) -}
+845591d5d5711a63193f5fa3c6678744
+  $tc'BVal :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14358521091542172994##
+                   18206236457551760999##
+                   StackVM.$trModule
+                   StackVM.$tc'BVal1) -}
+7424044e45e495bef8a1dfc09b3d7e6d
+  $tc'BVal1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'BVal"#) -}
+28aa9365e4d5f75eb86e4d0a5a0fb344
+  $tc'IVal :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12407789286349616806##
+                   17815437081273955789##
+                   StackVM.$trModule
+                   StackVM.$tc'IVal1) -}
+6b4d2ab33837500daffd65fafb7e00b6
+  $tc'IVal1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'IVal"#) -}
+7e3e05069c6b1544477f1560c8ea0927
+  $tc'Mul :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   526363026562200083##
+                   2099256006256530030##
+                   StackVM.$trModule
+                   StackVM.$tc'Mul1) -}
+f488dacab9051ea85f119ec1e143b9ff
+  $tc'Mul1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Mul"#) -}
+de09e57c4c2ac72efb226df56f03b7f8
+  $tc'Or :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4453469281037529470##
+                   12758732580057861659##
+                   StackVM.$trModule
+                   StackVM.$tc'Or1) -}
+5205396bf9d06c06d22b633eb8fb0ae0
+  $tc'Or1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Or"#) -}
+3f9ea8a3a7e02e17342f43369d27b829
+  $tc'PushB :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16025843288609733476##
+                   2988493224694725649##
+                   StackVM.$trModule
+                   StackVM.$tc'PushB1) -}
+6a7dd4d6eeb0884bae1717558fd955b9
+  $tc'PushB1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'PushB"#) -}
+5bd07ea9588eab3ec12671ab052587c0
+  $tc'PushI :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7655455403736292893##
+                   2957880690954779119##
+                   StackVM.$trModule
+                   StackVM.$tc'PushI1) -}
+84f98c6e0e82046b181f7107c6d60cd4
+  $tc'PushI1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'PushI"#) -}
+e7105e82843790e97038f4ebd57c07b4
+  $tc'Void :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4145970395067028358##
+                   6468383710507867982##
+                   StackVM.$trModule
+                   StackVM.$tc'Void1) -}
+6c6c9e13a15eea870a8ce5c11f806e6a
+  $tc'Void1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Void"#) -}
+7486444b4f690a03cefe327b597a6290
+  $tcStackExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11870259583243662005##
+                   13329976390224409173##
+                   StackVM.$trModule
+                   StackVM.$tcStackExp1) -}
+bc1fbbe857ce52d5e67991cc1d6fcd5b
+  $tcStackExp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "StackExp"#) -}
+537c2e28b01eb53dde0c5024a4c08693
+  $tcStackVal :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17246709201476472566##
+                   14730525207995091281##
+                   StackVM.$trModule
+                   StackVM.$tcStackVal1) -}
+c3299dd1983f92ca174d41013ac3d4d4
+  $tcStackVal1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "StackVal"#) -}
+2678c52add356701fad382e3abf334c3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   StackVM.$trModule2
+                   StackVM.$trModule1) -}
+f973ad73af941c8dbb3a86a09af22100
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "StackVM"#) -}
+bec0c6eed91ab88d624b021f00c0bb07
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "W5-0.1.0.0-C1YhGcVwRjoCzSJResfj0m"#) -}
+f78bb1fbe422c360aafaa97f39e938a1
+  type Program = [StackVM.StackExp]
+19194019e0615300809675db7df89254
+  type Stack = [StackVM.StackVal]
+d10f129054310e6db56b92e4eb8eb422
+  data StackExp
+    = PushI GHC.Integer.Type.Integer
+    | PushB GHC.Types.Bool
+    | Add
+    | Mul
+    | And
+    | Or
+4cc3f025c277b30a4e850f3624691c5b
+  data StackVal
+    = IVal GHC.Integer.Type.Integer | BVal GHC.Types.Bool | Void
+01092d494a4016964ac7d2418ed47d8d
+  execute ::
+    StackVM.Stack
+    -> StackVM.Program
+    -> Data.Either.Either GHC.Base.String StackVM.StackVal
+  {- Arity: 2, Strictness: <S,U><S,U> -}
+d904e6f59d5f76dc068ca63b245c53e2
+  stackVM ::
+    StackVM.Program
+    -> Data.Either.Either GHC.Base.String StackVM.StackVal
+  {- Arity: 1,
+     Unfolding: (StackVM.execute (GHC.Types.[] @ StackVM.StackVal)) -}
+instance [safe] GHC.Show.Show [StackVM.StackExp]
+  = StackVM.$fShowStackExp
+instance [safe] GHC.Show.Show [StackVM.StackVal]
+  = StackVM.$fShowStackVal
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

@@ -1,0 +1,598 @@
+
+==================== FINAL INTERFACE ====================
+2017-03-07 20:31:35.070385 UTC
+
+interface W5-0.1.0.0-C1YhGcVwRjoCzSJResfj0m:Parser 8001
+  interface hash: 810e9e47015733b892608613593d1c6f
+  ABI hash: 2b7219f972cc4f9f1e3f2ec0bd52c925
+  export-list hash: 6518b065a8a1f96c7e5e648dd7196772
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b159a15c55fa7c6870cb2eb79bbae5a5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Parser.parseExp
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Control.Applicative 7728b33d6969dce59e89474349eb1397
+import  -/  base-4.9.0.0:Control.Arrow 29ee70aef11b50f3bae1135acf073ed5
+import  -/  base-4.9.0.0:Data.Char eb33dc25ecb52d018a0ca26590e2b50b
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:Data.Functor 6fc476505db88d678632a4a838125f13
+import  -/  base-4.9.0.0:Data.List 49b86831b79b49ce5d4d9416ecba61df
+import  -/  base-4.9.0.0:Data.Maybe 5f2ba364cbe65c060bc5436bc0b9d049
+import  -/  base-4.9.0.0:Data.Monoid 1efae021212a10c79fd75960dc0a1d99
+import  -/  base-4.9.0.0:Data.Tuple acb0ed10307ed88df6c81b8589f4de16
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:GHC.Real 08bf4acb5f2508f89d6fbcd57fe232e9
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:GHC.Unicode 2343b0871604cc5116abba8f24d75b42
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 62c0e736506aac47ef40569f5b82e19d
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fAlternativeState :: GHC.Base.Alternative (Parser.State s)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ s.
+                  @ (Parser.State s)
+                  (Parser.$fApplicativeState @ s)
+                  (Parser.$fAlternativeState_$cempty @ s)
+                  (Parser.$fAlternativeState_$c<|> @ s)
+                  (Parser.$fAlternativeState_$csome @ s)
+                  (Parser.$fAlternativeState_$cmany @ s) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fAlternativeState1 ::
+    Parser.State s a -> s -> GHC.Base.Maybe ([a], s)
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),C(U)><L,U>,
+     Unfolding: (\ @ s @ a (eta :: Parser.State s a) (eta1 :: s) ->
+                 letrec {
+                   many_v :: s -> GHC.Base.Maybe ([a], s)
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ (s1 :: s) ->
+                     case eta `cast` (Parser.N:State[0] <s>_R <a>_R) s1 of wild {
+                       GHC.Base.Nothing -> GHC.Base.Just @ ([a], s) (GHC.Types.[] @ a, s1)
+                       GHC.Base.Just x
+                       -> case many_v (case x of wild1 { (,) x1 y -> y }) of wild1 {
+                            GHC.Base.Nothing -> GHC.Base.Just @ ([a], s) (GHC.Types.[] @ a, s1)
+                            GHC.Base.Just x1
+                            -> GHC.Base.Just
+                                 @ ([a], s)
+                                 (GHC.Types.:
+                                    @ a
+                                    (case x of wild2 { (,) x2 y -> x2 })
+                                    (case x1 of wild2 { (,) x2 y -> x2 }),
+                                  case x1 of wild2 { (,) x2 y -> y }) } }
+                 } in
+                 many_v eta1) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fAlternativeState2 ::
+    Parser.State s a -> s -> GHC.Base.Maybe ([a], s)
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),C(U)><L,U>,
+     Unfolding: (\ @ s @ a (eta :: Parser.State s a) (eta1 :: s) ->
+                 letrec {
+                   some_v :: s -> GHC.Base.Maybe ([a], s)
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ (s1 :: s) ->
+                     case eta `cast` (Parser.N:State[0] <s>_R <a>_R) s1 of wild {
+                       GHC.Base.Nothing -> GHC.Base.Nothing @ ([a], s)
+                       GHC.Base.Just x
+                       -> let {
+                            s' :: s = case x of wild1 { (,) x1 y -> y }
+                          } in
+                          case some_v s' of wild1 {
+                            GHC.Base.Nothing
+                            -> GHC.Base.Just
+                                 @ ([a], s)
+                                 (GHC.Types.:
+                                    @ a
+                                    (case x of wild2 { (,) x1 y -> x1 })
+                                    (GHC.Types.[] @ a),
+                                  s')
+                            GHC.Base.Just x1
+                            -> GHC.Base.Just
+                                 @ ([a], s)
+                                 (GHC.Types.:
+                                    @ a
+                                    (case x of wild2 { (,) x2 y -> x2 })
+                                    (case x1 of wild2 { (,) x2 y -> x2 }),
+                                  case x1 of wild2 { (,) x2 y -> y }) } }
+                 } in
+                 some_v eta1) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fAlternativeState3 ::
+    Parser.State s a -> Parser.State s a -> s -> GHC.Base.Maybe (a, s)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   @ a
+                   (ds2 :: Parser.State s a)
+                   (ds3 :: Parser.State s a)
+                   (s1 :: s) ->
+                 case ds2 `cast` (Parser.N:State[0] <s>_R <a>_R) s1 of wild {
+                   GHC.Base.Nothing -> ds3 `cast` (Parser.N:State[0] <s>_R <a>_R) s1
+                   GHC.Base.Just x -> GHC.Base.Just @ (a, s) x }) -}
+70fd15d15c08baf4daa62fcc96ab39ac
+  $fAlternativeState4 :: s -> GHC.Base.Maybe (a, s)
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ s @ a (ds2 :: s) -> GHC.Base.Nothing @ (a, s)) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fAlternativeState_$c<|> ::
+    Parser.State s a -> Parser.State s a -> Parser.State s a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Parser.$fAlternativeState3
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N).
+                 <Parser.State s a>_R
+                 ->_R <Parser.State s a>_R
+                 ->_R Sym (Parser.N:State[0] <s>_R <a>_R)) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fAlternativeState_$cempty :: Parser.State s a
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Parser.$fAlternativeState4
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N).
+                 Sym (Parser.N:State[0] <s>_R <a>_R)) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fAlternativeState_$cmany :: Parser.State s a -> Parser.State s [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),C(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Parser.$fAlternativeState1
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N).
+                 <Parser.State s a>_R ->_R Sym (Parser.N:State[0] <s>_R <[a]>_R)) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fAlternativeState_$csome :: Parser.State s a -> Parser.State s [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),C(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Parser.$fAlternativeState2
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N).
+                 <Parser.State s a>_R ->_R Sym (Parser.N:State[0] <s>_R <[a]>_R)) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fApplicativeState :: GHC.Base.Applicative (Parser.State s)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ s.
+                  @ (Parser.State s)
+                  (Parser.$fFunctorState @ s)
+                  (Parser.$fApplicativeState_$cpure @ s)
+                  (Parser.$fApplicativeState_$c<*> @ s)
+                  (Parser.$fApplicativeState_$c*> @ s)
+                  (Parser.$fApplicativeState_$c<* @ s) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fApplicativeState1 ::
+    Parser.State s a -> Parser.State s b -> s -> GHC.Base.Maybe (a, s)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   @ a
+                   @ b
+                   (eta :: Parser.State s a)
+                   (eta1 :: Parser.State s b)
+                   (eta2 :: s) ->
+                 case eta `cast` (Parser.N:State[0] <s>_R <a>_R) eta2 of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ (a, s)
+                   GHC.Base.Just x
+                   -> case eta1 `cast` (Parser.N:State[0] <s>_R <b>_R)
+                             (case x of wild1 { (,) x1 y -> y }) of wild1 {
+                        GHC.Base.Nothing -> GHC.Base.Nothing @ (a, s)
+                        GHC.Base.Just x1
+                        -> GHC.Base.Just
+                             @ (a, s)
+                             (case x of wild2 { (,) x2 y -> x2 },
+                              case x1 of wild2 { (,) x2 y -> y }) } }) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fApplicativeState2 ::
+    Parser.State s a -> Parser.State s b -> s -> GHC.Base.Maybe (b, s)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   @ a
+                   @ b
+                   (eta :: Parser.State s a)
+                   (eta1 :: Parser.State s b)
+                   (eta2 :: s) ->
+                 case eta `cast` (Parser.N:State[0] <s>_R <a>_R) eta2 of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ (b, s)
+                   GHC.Base.Just x
+                   -> case eta1 `cast` (Parser.N:State[0] <s>_R <b>_R)
+                             (case x of wild1 { (,) x1 y -> y }) of wild1 {
+                        GHC.Base.Nothing -> GHC.Base.Nothing @ (b, s)
+                        GHC.Base.Just x1
+                        -> GHC.Base.Just
+                             @ (b, s)
+                             (case x1 of wild2 { (,) x2 y -> x2 },
+                              case x1 of wild2 { (,) x2 y -> y }) } }) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fApplicativeState3 ::
+    Parser.State s (a -> b)
+    -> Parser.State s a -> s -> GHC.Base.Maybe (b, s)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   @ a
+                   @ b
+                   (ds2 :: Parser.State s (a -> b))
+                   (ds3 :: Parser.State s a)
+                   (s1 :: s) ->
+                 case ds2 `cast` (Parser.N:State[0] <s>_R <a -> b>_R) s1 of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ (b, s)
+                   GHC.Base.Just ds4
+                   -> case ds4 of wild1 { (,) r s' ->
+                      case ds3 `cast` (Parser.N:State[0] <s>_R <a>_R) s' of wild2 {
+                        GHC.Base.Nothing -> GHC.Base.Nothing @ (b, s)
+                        GHC.Base.Just x
+                        -> GHC.Base.Just
+                             @ (b, s)
+                             (Control.Arrow.$fArrow(->)_$cfirst @ a @ b @ s r x) } } }) -}
+7a01ad86cb21446cfd1b3373e2a5ec59
+  $fApplicativeState4 :: a -> s -> GHC.Base.Maybe (a, s)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ s @ a (x :: a) (s1 :: s) -> GHC.Base.Just @ (a, s) (x, s1)) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fApplicativeState_$c*> ::
+    Parser.State s a -> Parser.State s b -> Parser.State s b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Parser.$fApplicativeState2
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N) (b :: <*>_N).
+                 <Parser.State s a>_R
+                 ->_R <Parser.State s b>_R
+                 ->_R Sym (Parser.N:State[0] <s>_R <b>_R)) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fApplicativeState_$c<* ::
+    Parser.State s a -> Parser.State s b -> Parser.State s a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Parser.$fApplicativeState1
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N) (b :: <*>_N).
+                 <Parser.State s a>_R
+                 ->_R <Parser.State s b>_R
+                 ->_R Sym (Parser.N:State[0] <s>_R <a>_R)) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fApplicativeState_$c<*> ::
+    Parser.State s (a -> b) -> Parser.State s a -> Parser.State s b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Parser.$fApplicativeState3
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N) (b :: <*>_N).
+                 <Parser.State s (a -> b)>_R
+                 ->_R <Parser.State s a>_R
+                 ->_R Sym (Parser.N:State[0] <s>_R <b>_R)) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fApplicativeState_$cpure :: a -> Parser.State s a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m2,
+     Unfolding: InlineRule (0, True, True)
+                Parser.$fApplicativeState4
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N).
+                 <a>_R ->_R Sym (Parser.N:State[0] <s>_R <a>_R)) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fFunctorState :: GHC.Base.Functor (Parser.State s)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ s.
+                  @ (Parser.State s)
+                  (Parser.$fFunctorState_$cfmap @ s)
+                  (Parser.$fFunctorState_$c<$ @ s) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fFunctorState1 ::
+    a -> Parser.State s b -> s -> GHC.Base.Maybe (a, s)
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s @ a @ b (eta :: a) (eta1 :: Parser.State s b) (eta2 :: s) ->
+                 case eta1 `cast` (Parser.N:State[0] <s>_R <b>_R) eta2 of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ (a, s)
+                   GHC.Base.Just x
+                   -> GHC.Base.Just
+                        @ (a, s)
+                        (eta, case x of wild1 { (,) x1 y -> y }) }) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fFunctorState2 ::
+    (a -> b) -> Parser.State s a -> s -> GHC.Base.Maybe (b, s)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*C1(U)><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s @ a @ b (f :: a -> b) (ds2 :: Parser.State s a) (x :: s) ->
+                 case ds2 `cast` (Parser.N:State[0] <s>_R <a>_R) x of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ (b, s)
+                   GHC.Base.Just x1
+                   -> GHC.Base.Just
+                        @ (b, s)
+                        (Control.Arrow.$fArrow(->)_$cfirst @ a @ b @ s f x1) }) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fFunctorState_$c<$ :: a -> Parser.State s b -> Parser.State s a
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Parser.$fFunctorState1
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N) (b :: <*>_N).
+                 <a>_R
+                 ->_R <Parser.State s b>_R
+                 ->_R Sym (Parser.N:State[0] <s>_R <a>_R)) -}
+f283e760237eb8edf2e4f5d175bf3bd1
+  $fFunctorState_$cfmap ::
+    (a -> b) -> Parser.State s a -> Parser.State s b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*C1(U)><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Parser.$fFunctorState2
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N) (b :: <*>_N).
+                 <a -> b>_R
+                 ->_R <Parser.State s a>_R
+                 ->_R Sym (Parser.N:State[0] <s>_R <b>_R)) -}
+0a29b01abc96e44d411e935e92d6c688
+  $fShowExpr :: GHC.Show.Show Parser.Expr
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Parser.Expr
+                  Parser.$fShowExpr_$cshowsPrec
+                  Parser.$fShowExpr_$cshow
+                  Parser.$fShowExpr_$cshowList -}
+0a29b01abc96e44d411e935e92d6c688
+  $fShowExpr1 :: Parser.Expr -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Parser.Expr) (w1 :: GHC.Base.String) ->
+                 Parser.$w$cshowsPrec 0# w w1) -}
+0a29b01abc96e44d411e935e92d6c688
+  $fShowExpr_$cshow :: Parser.Expr -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Parser.Expr) ->
+                 Parser.$fShowExpr_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+0a29b01abc96e44d411e935e92d6c688
+  $fShowExpr_$cshowList :: [Parser.Expr] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Parser.Expr
+                   Parser.$fShowExpr1) -}
+0a29b01abc96e44d411e935e92d6c688
+  $fShowExpr_$cshowsPrec ::
+    GHC.Types.Int -> Parser.Expr -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Parser.Expr)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Parser.$w$cshowsPrec ww1 w1 w2 }) -}
+39f625796f4a56de21573cefe327c8c5
+  $tc'Add :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8373355555872274854##
+                   1669715718861122924##
+                   Parser.$trModule
+                   Parser.$tc'Add1) -}
+16f56c3ffbefe3d03646470c2972b587
+  $tc'Add1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Add"#) -}
+20339cd32ac088e45ea5f9b910daee8d
+  $tc'Const :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5654510298989093258##
+                   7073592065360410157##
+                   Parser.$trModule
+                   Parser.$tc'Const1) -}
+eaa3a0330d295cc913d9b162836f8044
+  $tc'Const1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Const"#) -}
+af05dc765b48c81b37742ba4ba59d333
+  $tc'Mul :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13229442018676159240##
+                   2930380841136498459##
+                   Parser.$trModule
+                   Parser.$tc'Mul1) -}
+776e8dcefb656ee37afdf8fcaa021159
+  $tc'Mul1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Mul"#) -}
+8651e4f6e5730b5abff1b3a693bce5cb
+  $tc'State :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8979848406236063599##
+                   3318332550376736327##
+                   Parser.$trModule
+                   Parser.$tc'State1) -}
+297c73d0ced29ed7696d7c5ae1493dbf
+  $tc'State1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'State"#) -}
+a65881b5e984e7f1f5e8ccd39480cec8
+  $tcExpr :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18403160226636590088##
+                   11127040412330256489##
+                   Parser.$trModule
+                   Parser.$tcExpr1) -}
+69f554a730d5af8fd0b00057c8150bea
+  $tcExpr1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Expr"#) -}
+4ff3d2a340f2d5eda74464a7efb8550f
+  $tcState :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14072469410208542912##
+                   4664503855801669111##
+                   Parser.$trModule
+                   Parser.$tcState1) -}
+f7f42a9d8493e1af3fd73fdd52ff2dba
+  $tcState1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "State"#) -}
+3fdda45ea75c8badff2efeb7d5a42427
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Parser.$trModule2
+                   Parser.$trModule1) -}
+aa7442e2133233e0a16579bcfa22dd6c
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Parser"#) -}
+18d49bdcea759f099f14c7898dd65c82
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "W5-0.1.0.0-C1YhGcVwRjoCzSJResfj0m"#) -}
+0a29b01abc96e44d411e935e92d6c688
+  $w$cshowsPrec ::
+    GHC.Prim.Int# -> Parser.Expr -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [0] -}
+0a29b01abc96e44d411e935e92d6c688
+  data Expr
+    = Const GHC.Integer.Type.Integer
+    | Add Parser.Expr Parser.Expr
+    | Mul Parser.Expr Parser.Expr
+3d57441c00f752c1f00b272db800a250
+  type Parser a = Parser.State GHC.Base.String a
+f283e760237eb8edf2e4f5d175bf3bd1
+  newtype State s r = State (s -> GHC.Base.Maybe (r, s))
+d00f907cb7e48cdeda599d8f94441845
+  parseExp ::
+    (GHC.Integer.Type.Integer -> a)
+    -> (a -> a -> a)
+    -> (a -> a -> a)
+    -> GHC.Base.String
+    -> GHC.Base.Maybe a
+  {- Arity: 4, Strictness: <L,C(U)><L,C(C1(U))><L,C(C1(U))><L,U>,
+     Unfolding: (\ @ a
+                   (con :: GHC.Integer.Type.Integer -> a)
+                   (add :: a -> a -> a)
+                   (mul :: a -> a -> a)
+                   (eta :: GHC.Base.String) ->
+                 case Parser.$fAlternativeState1
+                        @ [GHC.Types.Char]
+                        @ ()
+                        Parser.parseExp2
+                          `cast`
+                        (Sym (Parser.N:State[0] <[GHC.Types.Char]>_R <()>_R))
+                        eta of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ a
+                   GHC.Base.Just x
+                   -> case x of wild1 { (,) x1 y ->
+                      case Parser.parseExp1 y of wild2 {
+                        GHC.Base.Nothing -> GHC.Base.Nothing @ a
+                        GHC.Base.Just x2
+                        -> case x2 of wild3 { (,) x3 y1 ->
+                           case y1 of wild4 {
+                             []
+                             -> GHC.Base.Just
+                                  @ a
+                                  (letrec {
+                                     convert :: Parser.Expr -> a {- Arity: 1, Strictness: <S,1*U> -}
+                                     = \ (ds2 :: Parser.Expr) ->
+                                       case ds2 of wild5 {
+                                         Parser.Const x4 -> con x4
+                                         Parser.Add x4 y2 -> add (convert x4) (convert y2)
+                                         Parser.Mul x4 y2 -> mul (convert x4) (convert y2) }
+                                   } in
+                                   convert x3)
+                             : ipv ipv1 -> GHC.Base.Nothing @ a } } } } }) -}
+c91cd4006cfcbb1db747ecf8d90d8f01
+  parseExp1 ::
+    [GHC.Types.Char] -> GHC.Base.Maybe (Parser.Expr, [GHC.Types.Char])
+  {- Arity: 1, Strictness: <S,U> -}
+b3b6973e10587d63c41f409b4ba9c649
+  parseExp2 ::
+    [GHC.Types.Char] -> GHC.Base.Maybe ((), [GHC.Types.Char])
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (ds2 :: [GHC.Types.Char]) ->
+                 case ds2 of wild {
+                   [] -> GHC.Base.Nothing @ ((), [GHC.Types.Char])
+                   : c cs
+                   -> case c of ww { GHC.Types.C# ww1 ->
+                      let {
+                        x :: GHC.Prim.Word# = GHC.Prim.int2Word# (GHC.Prim.ord# ww1)
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.leWord# x 887##) of wild1 {
+                        GHC.Types.False
+                        -> case {__pkg_ccall base-4.9.0.0 u_iswspace GHC.Prim.Int#
+                                                                     -> GHC.Prim.State#
+                                                                          GHC.Prim.RealWorld
+                                                                     -> (# GHC.Prim.State#
+                                                                             GHC.Prim.RealWorld,
+                                                                           GHC.Prim.Int# #)}
+                                  (GHC.Prim.ord# ww1)
+                                  GHC.Prim.realWorld# of wild2 { (#,#) ds3 ds4 ->
+                           case ds4 of wild3 {
+                             DEFAULT
+                             -> GHC.Base.Just @ ((), [GHC.Types.Char]) (GHC.Tuple.(), cs)
+                             0# -> GHC.Base.Nothing @ ((), [GHC.Types.Char]) } }
+                        GHC.Types.True
+                        -> case x of wild2 {
+                             DEFAULT
+                             -> case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.leWord#
+                                          (GHC.Prim.minusWord# wild2 9##)
+                                          4##) of wild3 {
+                                  GHC.Types.False
+                                  -> case wild2 of wild4 {
+                                       DEFAULT -> GHC.Base.Nothing @ ((), [GHC.Types.Char])
+                                       160##
+                                       -> GHC.Base.Just
+                                            @ ((), [GHC.Types.Char])
+                                            (GHC.Tuple.(), cs) }
+                                  GHC.Types.True
+                                  -> GHC.Base.Just @ ((), [GHC.Types.Char]) (GHC.Tuple.(), cs) }
+                             32##
+                             -> GHC.Base.Just
+                                  @ ((), [GHC.Types.Char])
+                                  (GHC.Tuple.(), cs) } } } }) -}
+instance [safe] GHC.Base.Alternative [Parser.State]
+  = Parser.$fAlternativeState
+instance [safe] GHC.Base.Applicative [Parser.State]
+  = Parser.$fApplicativeState
+instance [safe] GHC.Base.Functor [Parser.State]
+  = Parser.$fFunctorState
+instance [safe] GHC.Show.Show [Parser.Expr] = Parser.$fShowExpr
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

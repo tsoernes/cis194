@@ -1,0 +1,64 @@
+
+==================== FINAL INTERFACE ====================
+2017-03-07 20:31:35.529246 UTC
+
+interface main@main:Main 8001
+  interface hash: 9446fe3049c9fec1e810c3669530d4f5
+  ABI hash: 7de056106b948a3068c147ce6c3aab78
+  export-list hash: 6e9ef263fbdf1d93803cbffda425a720
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 67f2f8421bd5055680d167f94e7be60f
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.eval
+  Main.main
+module dependencies:
+package dependencies: W5-0.1.0.0@W5-0.1.0.0-C1YhGcVwRjoCzSJResfj0m
+                      base-4.9.0.0* ghc-prim-0.5.0.0 integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  W5-0.1.0.0@W5-0.1.0.0-C1YhGcVwRjoCzSJResfj0m:ExprT c390bb180d6ca53789a5f087dea27c09
+import  -/  W5-0.1.0.0@W5-0.1.0.0-C1YhGcVwRjoCzSJResfj0m:Parser 2b7219f972cc4f9f1e3f2ec0bd52c925
+import  -/  base-4.9.0.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 62c0e736506aac47ef40569f5b82e19d
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+17826496459232b06a604c6716816460
+  eval :: ExprT.ExprT -> GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <S,1*U> -}
+029b6365df0d88571104274d61fb128a
+  main :: GHC.Types.IO ()
+  {- Strictness: x -}
+79a6bcf63a73f1b5df2b8d801a3f09ab
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1 @ () Main.main) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
