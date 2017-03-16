@@ -9,12 +9,12 @@ import Buffer
 
 main :: IO ()
 main = do
-  let a = scoreSizeLine "a"
-      b = scoreSizeLine "b"
-      c = scoreSizeLine "c"
-      d = scoreSizeLine "d"
-      e = scoreSizeLine "e"
-      f = scoreSizeLine "f"
+  let a = Single (Size 1) "a"
+      b = Single (Size 1) "b"
+      c = Single (Size 1) "c"
+      d = Single (Size 1) "d"
+      e = Single (Size 1) "e"
+      f = Single (Size 1) "f"
 
       g = a+++b
       h = c+++d
@@ -37,25 +37,13 @@ main = do
   print $ map (\x -> jlToList $ takeJ x jli) [0..6]
 
   -- Test scoreString
-  print $ scoreLine "yay " +++ scoreLine "haskell!"
-
-  -- Test toString
-  print $ toString jli
-
-  -- Test fromString
-  let scoreSizeJL = fromString "e\n\nf\nab q\nc\nd" :: JoinList (Score, Size) String
-  print scoreSizeJL
-
-  print $ toString scoreSizeJL
+  print $ scoreLine "yay " +++ scoreLine "haskell!"
 
 data JoinList m a = Empty
                   | Single m a
                   | Append m (JoinList m a) (JoinList m a)
                   deriving (Eq, Show)
 
-
-scoreSizeLine :: String -> JoinList (Score, Size) String
-scoreSizeLine str = Single (scoreString str, Size . length $ words str) str
 
 instance Buffer (JoinList (Score, Size) String) where
   toString Empty                  = ""
@@ -65,7 +53,7 @@ instance Buffer (JoinList (Score, Size) String) where
   -- Assume that Size counts the number words.
   -- Create a Single for each line with the calculated Score and Size
   -- Then +++ the singles.
-  fromString st = foldr ((+++) . scoreSizeLine) Empty (lines st)
+  fromString st = undefined -- map  $ unlines st
 
   line = indexJ
 
